@@ -1,0 +1,559 @@
+dilshan@dilshan-ubuntu:~$ pwd
+
+/home/dilshan
+
+dilshan@dilshan-ubuntu:~$ ls
+
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+
+dilshan@dilshan-ubuntu:~$ cd Documents
+
+dilshan@dilshan-ubuntu:~/Documents$ pwd
+
+/home/dilshan/Documents
+
+dilshan@dilshan-ubuntu:~/Documents$ mkdir python_project
+
+dilshan@dilshan-ubuntu:~/Documents$ ls
+
+python_project
+
+dilshan@dilshan-ubuntu:~/Documents$ cd python_project
+
+dilshan@dilshan-ubuntu:~/Documents/python_project$ touch main.py
+
+dilshan@dilshan-ubuntu:~/Documents/python_project$ ls
+
+main.py
+
+dilshan@dilshan-ubuntu:~/Documents/python_project$ rm main.py
+
+dilshan@dilshan-ubuntu:~/Documents/python_project$ ls
+
+dilshan@dilshan-ubuntu:~/Documents/python_project$ cd ..
+
+dilshan@dilshan-ubuntu:~/Documents$ rm -r python_project
+
+dilshan@dilshan-ubuntu:~/Documents$ ls
+
+dilshan@dilshan-ubuntu:~/Documents$ 
+
+dilshan@dilshan-ubuntu:~/Documents$ cd /
+
+dilshan@dilshan-ubuntu:/$ pwd
+
+/
+
+dilshan@dilshan-ubuntu:/$ ls
+
+bin  boot  cdrom  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  swapfile  sys  tmp  usr  var
+
+dilshan@dilshan-ubuntu:/$ cd /usr/local/bin
+
+dilshan@dilshan-ubuntu:/usr/local/bin$ ls
+
+dilshan@dilshan-ubuntu:/usr/local/bin$ cd ../..
+
+dilshan@dilshan-ubuntu:/usr$ cd local/bin
+
+dilshan@dilshan-ubuntu:/usr/local/bin$ cd /usr
+
+dilshan@dilshan-ubuntu:/usr$
+
+dilshan@dilshan-ubuntu:/usr$ cd ~
+
+dilshan@dilshan-ubuntu:~$ ls /etc/network
+
+if-down.d  if-post-down.d  if-pre-up.d  if-up.d
+
+dilshan@dilshan-ubuntu:~$ cd Documents/
+
+dilshan@dilshan-ubuntu:~/Documents$ ls
+
+dilshan@dilshan-ubuntu:~/Documents$ mkdir my_project
+
+dilshan@dilshan-ubuntu:~/Documents$ ls
+
+my_project
+
+dilshan@dilshan-ubuntu:~/Documents$ cd my_project
+
+dilshan@dilshan-ubuntu:~/Documents/my_project$ touch Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/my_project$ ls
+
+Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/my_project$ cd ..
+
+dilshan@dilshan-ubuntu:~/Documents$ ls
+
+my_project
+
+dilshan@dilshan-ubuntu:~/Documents$ mv my_project java_project
+
+dilshan@dilshan-ubuntu:~/Documents$ ls
+
+java_project
+
+dilshan@dilshan-ubuntu:~/Documents$ cd java_project
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls
+
+Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cd ..
+
+dilshan@dilshan-ubuntu:~/Documents$ cp java_project web_project
+
+cp: -r not specified; omitting directory 'java_project'
+
+dilshan@dilshan-ubuntu:~/Documents$ cp -r java_project web_project
+
+dilshan@dilshan-ubuntu:~/Documents$ ls
+
+java_project  web_project
+
+dilshan@dilshan-ubuntu:~/Documents$ cd web_project
+
+dilshan@dilshan-ubuntu:~/Documents/web_project$ ls
+
+Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/web_project$ cp Readme.md test_Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/web_project$ ls
+
+Readme.md  test_Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/web_project$ mv Readme.md dev_Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/web_project$ ls
+
+dev_Readme.md  test_Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents$ cd ~
+
+dilshan@dilshan-ubuntu:~$ ls Documents/
+
+java_project  web_project
+
+dilshan@dilshan-ubuntu:~$ ls -R Documents
+
+Documents:
+
+java_project  web_project
+
+
+
+Documents/java_project:
+
+Readme.md
+
+
+
+Documents/web_project:
+
+dev_Readme.md  test_Readme.md
+
+dilshan@dilshan-ubuntu:~$ history
+
+    1  pwd
+
+    2  ls
+
+    3  cd Documents
+
+    4  pwd
+
+    5  mkdir python_project
+
+    6  ls
+
+    7  cd python_project
+
+    8  touch main.py
+
+    9  ls
+
+   10  rm main.py
+
+   11  ls
+
+   12  cd ..
+
+   13  rm -r python_project
+
+   14  ls
+
+   15  clear
+
+   16  cd /
+
+   17  pwd
+
+   18  ls
+
+   19  cd /usr/local/bin
+
+   20  ls
+
+   21  cd ../..
+
+   22  cd /local/bin
+
+   23  cd /local/bin/
+
+   24  cd local/bin
+
+   25  cd /usr
+
+   26  clear
+
+   27  cd ~
+
+   28  ls /etc/network
+
+   29  clear
+
+   30  cd Documents/
+
+   31  ls
+
+   32  mkdir my_project
+
+   33  ls
+
+   34  cd my_project
+
+   35  touch Readme.md
+
+   36  ls
+
+   37  cd ..
+
+   38  ls
+
+   39  mv my_project java_project
+
+   40  ls
+
+   41  cd java_project
+
+   42  ls
+
+   43  cd ..
+
+   44  cp java_project web_project
+
+   45  cp -r java_project web_project
+
+   46  ls
+
+   47  cd web_project
+
+   48  ls
+
+   49  cp Readme.md test_Readme.md
+
+   50  ls
+
+   51  mv Readme.md dev_Readme.md
+
+   52  ls
+
+   53  clear
+
+   54  cd ~
+
+   55  cd Documents/
+
+   56  ls
+
+   57  ls -R Documents
+
+   58  ls -R /Documents
+
+   59  clear
+
+   60  cd ~
+
+   61  ls Documents/
+
+   62  ls -R Documents
+
+   63  history
+
+(reverse-i-search)`': ^C
+
+dilshan@dilshan-ubuntu:~$ history 20
+
+   46  ls
+
+   47  cd web_project
+
+   48  ls
+
+   49  cp Readme.md test_Readme.md
+
+   50  ls
+
+   51  mv Readme.md dev_Readme.md
+
+   52  ls
+
+   53  clear
+
+   54  cd ~
+
+   55  cd Documents/
+
+   56  ls
+
+   57  ls -R Documents
+
+   58  ls -R /Documents
+
+   59  clear
+
+   60  cd ~
+
+   61  ls Documents/
+
+   62  ls -R Documents
+
+   63  history
+
+   64  clear
+
+   65  history 20
+
+dilshan@dilshan-ubuntu:~$ ls -a
+
+.              .bashrc  Documents  Music     snap                                    .vboxclient-clipboard-tty2-service.pid    .vboxclient-seamless-tty2-control.pid        Videos
+
+..             .cache   Downloads  Pictures  .ssh                                    .vboxclient-draganddrop-tty2-control.pid  .vboxclient-seamless-tty2-service.pid
+
+.bash_history  .config  .gnupg     .profile  Templates                               .vboxclient-draganddrop-tty2-service.pid  .vboxclient-vmsvga-session-tty2-control.pid
+
+.bash_logout   Desktop  .local     Public    .vboxclient-clipboard-tty2-control.pid  .vboxclient-hostversion-tty2-control.pid  .vboxclient-vmsvga-session-tty2-service.pid
+
+dilshan@dilshan-ubuntu:~$ cat .bash_history
+
+pwd
+
+dilshan@dilshan-ubuntu:~$ uname -a
+
+Linux dilshan-ubuntu 5.19.0-41-generic #42~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 18 17:40:00 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+dilshan@dilshan-ubuntu:~$ cat /etc/os-release
+
+PRETTY_NAME="Ubuntu 22.04.2 LTS"
+
+NAME="Ubuntu"
+
+VERSION_ID="22.04"
+
+VERSION="22.04.2 LTS (Jammy Jellyfish)"
+
+VERSION_CODENAME=jammy
+
+ID=ubuntu
+
+ID_LIKE=debian
+
+HOME_URL="https://www.ubuntu.com/"
+
+SUPPORT_URL="https://help.ubuntu.com/"
+
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+
+UBUNTU_CODENAME=jammy
+
+dilshan@dilshan-ubuntu:~$ lscpu
+
+Architecture:            x86_64
+
+  CPU op-mode(s):        32-bit, 64-bit
+
+  Address sizes:         39 bits physical, 48 bits virtual
+
+  Byte Order:            Little Endian
+
+CPU(s):                  2
+
+  On-line CPU(s) list:   0,1
+
+Vendor ID:               GenuineIntel
+
+  Model name:            11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+
+    CPU family:          6
+
+    Model:               140
+
+    Thread(s) per core:  1
+
+    Core(s) per socket:  2
+
+    Socket(s):           1
+
+    Stepping:            1
+
+    BogoMIPS:            4838.39
+
+    Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid t
+
+                         sc_known_freq pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 movbe popcnt aes rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ibrs_enhanced fsgsbase bmi1 bmi2 invpcid rds
+
+                         eed clflushopt md_clear flush_l1d arch_capabilities
+
+Virtualization features: 
+
+  Hypervisor vendor:     KVM
+
+  Virtualization type:   full
+
+Caches (sum of all):     
+
+  L1d:                   96 KiB (2 instances)
+
+  L1i:                   64 KiB (2 instances)
+
+  L2:                    2,5 MiB (2 instances)
+
+  L3:                    16 MiB (2 instances)
+
+NUMA:                    
+
+  NUMA node(s):          1
+
+  NUMA node0 CPU(s):     0,1
+
+Vulnerabilities:         
+
+  Itlb multihit:         Not affected
+
+  L1tf:                  Not affected
+
+  Mds:                   Not affected
+
+  Meltdown:              Not affected
+
+  Mmio stale data:       Not affected
+
+  Retbleed:              Mitigation; Enhanced IBRS
+
+  Spec store bypass:     Vulnerable
+
+  Spectre v1:            Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+
+  Spectre v2:            Mitigation; Enhanced IBRS, RSB filling, PBRSB-eIBRS SW sequence
+
+  Srbds:                 Not affected
+
+  Tsx async abort:       Not affected
+
+dilshan@dilshan-ubuntu:~$ lsmem
+
+RANGE                                  SIZE  STATE REMOVABLE BLOCK
+
+0x0000000000000000-0x00000000dfffffff  3,5G online       yes  0-27
+
+0x0000000100000000-0x000000011fffffff  512M online       yes 32-35
+
+
+
+Memory block size:       128M
+
+Total online memory:       4G
+
+Total offline memory:      0B
+
+-------------------------------------------------------------------------------------------------------------------
+#Super User Commands:
+
+ilshan@dilshan-ubuntu:~$ adduser admin
+
+adduser: Only root may add a user or group to the system.
+
+dilshan@dilshan-ubuntu:~$ sudo adduser admin
+
+[sudo] password for dilshan: 
+
+Adding user `admin' ...
+
+Adding new group `admin' (1001) ...
+
+Adding new user `admin' (1001) with group `admin' ...
+
+Creating home directory `/home/admin' ...
+
+Copying files from `/etc/skel' ...
+
+New password: 
+
+BAD PASSWORD: The password is shorter than 8 characters
+
+Retype new password: 
+
+passwd: password updated successfully
+
+Changing the user information for admin
+
+Enter the new value, or press ENTER for the default
+
+	Full Name []: admin
+
+	Room Number []: 
+
+	Work Phone []: 
+
+	Home Phone []: 
+
+	Other []: 
+
+Is the information correct? [Y/n] Y
+
+dilshan@dilshan-ubuntu:~$ cd /home
+
+dilshan@dilshan-ubuntu:/home$ ls
+
+admin  dilshan
+
+dilshan@dilshan-ubuntu:/home$ sudo addgroup devops
+
+[sudo] password for dilshan: 
+
+Adding group `devops' (GID 1002) ...
+
+Done.
+
+dilshan@dilshan-ubuntu:/home$ su - admin
+
+Password: 
+
+To run a command as administrator (user "root"), use "sudo <command>".
+
+See "man sudo_root" for details.
+
+
+
+admin@dilshan-ubuntu:~$ pwd
+
+/home/admin
+
+admin@dilshan-ubuntu:~$ su - dilshan
+
+Password: 
+
+dilshan@dilshan-ubuntu:~$ pwd
+
+/home/dilshan
+
+
+
+
+
