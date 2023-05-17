@@ -1,0 +1,3 @@
+Linux File System
+
+bin, sbin, lib, usr, usr/local, opt, boot : All are read only folders
