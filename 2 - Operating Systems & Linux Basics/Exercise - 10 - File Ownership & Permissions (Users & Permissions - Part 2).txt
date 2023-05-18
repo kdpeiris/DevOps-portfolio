@@ -1,0 +1,125 @@
+###File Ownership:
+###Change both user & group
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rw-r-- 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chown john:devops deployment.yaml
+
+[sudo] password for dilshan: 
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rw-r-- 1 john    devops  284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+###Change only user
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chown dilshan deployment.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rw-r-- 1 dilshan devops  284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+###Change only group
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chgrp dilshan deployment.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rw-r-- 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+###File Permission in Symbolic mode:
+###Change execute permission for user, group & other of the file
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rw-r-- 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chmod +x deployment.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rwxrwxr-x 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chmod a-x deployment.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rw-r-- 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+###Add execute permission for the group of that file own
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chmod g+x deployment.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rwxr-- 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+###Remove write permission for the user of that file own
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chmod u-w deployment.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-r--rwxr-- 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+###Change multiple permissions for user of that file own
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chmod u=rw- deployment.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rwxr-- 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md
+
+
+###File Permission in Absolute(Numeric) Mode:
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo chmod 664 deployment.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls -l
+
+total 8
+
+-rw-rw-r-- 1 dilshan dilshan 284 mai   17 19:22 deployment.yaml
+
+-rw-rw-r-- 1 dilshan dilshan  43 mai   17 18:37 Readme.md

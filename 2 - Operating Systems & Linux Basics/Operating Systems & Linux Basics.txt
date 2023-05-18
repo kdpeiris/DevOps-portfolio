@@ -1,4 +1,4 @@
-Linux File System
+Linux File System:
 
 bin, sbin, lib, usr, usr/local, opt, boot : All are read only folders
 
@@ -6,3 +6,47 @@ User & Group Commands:
 
 adduser, addgroup, deluser, delgroup - use for manual execution (user friendly)
 useradd, groupadd, userdel, groupdel - use for automated way (low-level utilities)
+
+File Ownership:
+
+#Change both user & group
+sudo chown username:groupname filename
+
+#Change only user
+sudo chown username filename
+
+#Change only group
+sudo chgrp groupname filename
+
+File Permission in Symbolic mode:
+
+u(user); g(group); o(other)
++(add permission); -(remove permission)
+r(read); w(write); x(execute)
+
+#Remove execute permission for user, group & other of the file
+sudo chmod -x filename
+sudo chmod a-x filename (a stands for al the users)
+
+#Add write permission for the group of that file own
+sudo chmod g+w filename
+
+#Remove write permission for the user of that file own
+sudo chmod u-w filename
+
+#Change multiple permissions for the group owner
+sudo chmod g=rw- filename
+
+File Permission in Absolute(Numeric) Mode:
+
+0 | --- | No Permission
+1 | --x | Execute
+2 | -w- | Write
+3 | -wx | Write + Execute
+4 | r-- | Read
+5 | r-x | Read + Execute
+6 | rw- | Read + Write
+7 | rwx | Read + Write + Execute
+
+sudo chmod 777 filename
+
