@@ -1,0 +1,146 @@
+dilshan@dilshan-ubuntu:~$ cd Documents/
+
+dilshan@dilshan-ubuntu:~/Documents$ ls
+
+java_project  web_project
+
+dilshan@dilshan-ubuntu:~/Documents$ cd java_project
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls
+
+Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ vim Readme.md
+
+Command 'vim' not found, but can be installed with:
+
+sudo apt install vim         # version 2:8.2.3995-1ubuntu2.7, or
+
+sudo apt install vim-tiny    # version 2:8.2.3995-1ubuntu2.7
+
+sudo apt install vim-athena  # version 2:8.2.3995-1ubuntu2.7
+
+sudo apt install vim-gtk3    # version 2:8.2.3995-1ubuntu2.7
+
+sudo apt install vim-nox     # version 2:8.2.3995-1ubuntu2.7
+
+sudo apt install neovim      # version 0.6.1-3
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ sudo apt install vim
+
+[sudo] password for dilshan: 
+
+Reading package lists... Done
+
+Building dependency tree... Done
+
+Reading state information... Done
+
+The following additional packages will be installed:
+
+  vim-common vim-runtime vim-tiny
+
+Suggested packages:
+
+  ctags vim-doc vim-scripts indent
+
+The following NEW packages will be installed:
+
+  vim vim-runtime
+
+The following packages will be upgraded:
+
+  vim-common vim-tiny
+
+2 upgraded, 2 newly installed, 0 to remove and 155 not upgraded.
+
+Need to get 8 553 kB/9 342 kB of archives.
+
+After this operation, 37,6 MB of additional disk space will be used.
+
+Do you want to continue? [Y/n] Y
+
+Get:1 http://no.archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim-runtime all 2:8.2.3995-1ubuntu2.7 [6 825 kB]
+
+Get:2 http://no.archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim amd64 2:8.2.3995-1ubuntu2.7 [1 728 kB]
+
+Fetched 8 553 kB in 2s (4 780 kB/s)
+
+(Reading database ... 197894 files and directories currently installed.)
+
+Preparing to unpack .../vim-tiny_2%3a8.2.3995-1ubuntu2.7_amd64.deb ...
+
+Unpacking vim-tiny (2:8.2.3995-1ubuntu2.7) over (2:8.2.3995-1ubuntu2.3) ...
+
+Preparing to unpack .../vim-common_2%3a8.2.3995-1ubuntu2.7_all.deb ...
+
+Unpacking vim-common (2:8.2.3995-1ubuntu2.7) over (2:8.2.3995-1ubuntu2.3) ...
+
+Selecting previously unselected package vim-runtime.
+
+Preparing to unpack .../vim-runtime_2%3a8.2.3995-1ubuntu2.7_all.deb ...
+
+Adding 'diversion of /usr/share/vim/vim82/doc/help.txt to /usr/share/vim/vim82/doc/help.txt.vim-tiny by vim-runtime'
+
+Adding 'diversion of /usr/share/vim/vim82/doc/tags to /usr/share/vim/vim82/doc/tags.vim-tiny by vim-runtime'
+
+Unpacking vim-runtime (2:8.2.3995-1ubuntu2.7) ...
+
+Selecting previously unselected package vim.
+
+Preparing to unpack .../vim_2%3a8.2.3995-1ubuntu2.7_amd64.deb ...
+
+Unpacking vim (2:8.2.3995-1ubuntu2.7) ...
+
+Setting up vim-common (2:8.2.3995-1ubuntu2.7) ...
+
+Setting up vim-runtime (2:8.2.3995-1ubuntu2.7) ...
+
+Setting up vim (2:8.2.3995-1ubuntu2.7) ...
+
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+
+Setting up vim-tiny (2:8.2.3995-1ubuntu2.7) ...
+
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+
+Processing triggers for man-db (2.10.2-1) ...
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ vim Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cat Readme.md
+
+This is a Java Project
+
+
+
+First Java Project
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ vim Readme.md
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cat Readme.md
+
+This is a Java Project
+
+
+
+First Java Project
+
