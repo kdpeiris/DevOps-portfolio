@@ -1,0 +1,641 @@
+###Get users
+
+dilshan@dilshan-ubuntu:~$ cat /etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+
+sync:x:4:65534:sync:/bin:/bin/sync
+
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+
+tss:x:106:112:TPM software stack,,,:/var/lib/tpm:/bin/false
+
+uuidd:x:107:115::/run/uuidd:/usr/sbin/nologin
+
+systemd-oom:x:108:116:systemd Userspace OOM Killer,,,:/run/systemd:/usr/sbin/nologin
+
+tcpdump:x:109:117::/nonexistent:/usr/sbin/nologin
+
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+
+kernoops:x:113:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+
+avahi:x:114:121:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+
+cups-pk-helper:x:115:122:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+
+rtkit:x:116:123:RealtimeKit,,,:/proc:/usr/sbin/nologin
+
+whoopsie:x:117:124::/nonexistent:/bin/false
+
+sssd:x:118:125:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+
+speech-dispatcher:x:119:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+
+fwupd-refresh:x:120:126:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+
+nm-openvpn:x:121:127:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+
+saned:x:122:129::/var/lib/saned:/usr/sbin/nologin
+
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+
+dilshan:x:1000:1000:dilshan,,,:/home/dilshan:/bin/bash
+
+vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+
+admin:x:1001:1001:admin,,,:/home/admin:/bin/bash
+
+--------------------------------------------------------------------------------------------------------
+###Get passwords of the users (Encrypted)
+
+dilshan@dilshan-ubuntu:~$ cat /etc/shadow
+
+cat: /etc/shadow: Permission denied
+
+dilshan@dilshan-ubuntu:~$ sudo cat /etc/shadow
+
+[sudo] password for dilshan: 
+
+root:!:19494:0:99999:7:::
+
+daemon:*:19411:0:99999:7:::
+
+bin:*:19411:0:99999:7:::
+
+sys:*:19411:0:99999:7:::
+
+sync:*:19411:0:99999:7:::
+
+games:*:19411:0:99999:7:::
+
+man:*:19411:0:99999:7:::
+
+lp:*:19411:0:99999:7:::
+
+mail:*:19411:0:99999:7:::
+
+news:*:19411:0:99999:7:::
+
+uucp:*:19411:0:99999:7:::
+
+proxy:*:19411:0:99999:7:::
+
+www-data:*:19411:0:99999:7:::
+
+backup:*:19411:0:99999:7:::
+
+list:*:19411:0:99999:7:::
+
+irc:*:19411:0:99999:7:::
+
+gnats:*:19411:0:99999:7:::
+
+nobody:*:19411:0:99999:7:::
+
+systemd-network:*:19411:0:99999:7:::
+
+systemd-resolve:*:19411:0:99999:7:::
+
+messagebus:*:19411:0:99999:7:::
+
+systemd-timesync:*:19411:0:99999:7:::
+
+syslog:*:19411:0:99999:7:::
+
+_apt:*:19411:0:99999:7:::
+
+tss:*:19411:0:99999:7:::
+
+uuidd:*:19411:0:99999:7:::
+
+systemd-oom:*:19411:0:99999:7:::
+
+tcpdump:*:19411:0:99999:7:::
+
+avahi-autoipd:*:19411:0:99999:7:::
+
+usbmux:*:19411:0:99999:7:::
+
+dnsmasq:*:19411:0:99999:7:::
+
+kernoops:*:19411:0:99999:7:::
+
+avahi:*:19411:0:99999:7:::
+
+cups-pk-helper:*:19411:0:99999:7:::
+
+rtkit:*:19411:0:99999:7:::
+
+whoopsie:*:19411:0:99999:7:::
+
+sssd:*:19411:0:99999:7:::
+
+speech-dispatcher:!:19411:0:99999:7:::
+
+fwupd-refresh:*:19411:0:99999:7:::
+
+nm-openvpn:*:19411:0:99999:7:::
+
+saned:*:19411:0:99999:7:::
+
+colord:*:19411:0:99999:7:::
+
+geoclue:*:19411:0:99999:7:::
+
+pulse:*:19411:0:99999:7:::
+
+gnome-initial-setup:*:19411:0:99999:7:::
+
+hplip:*:19411:0:99999:7:::
+
+gdm:*:19411:0:99999:7:::
+
+dilshan:$y$j9T$klRIsCZfRD2kzrFIjvIv10$YgK3/xU/P522IfM6pe3N67tsMKjLOAcL0hCMfLBbS/.:19494:0:99999:7:::
+
+vboxadd:!:19494::::::
+
+admin:$y$j9T$KOyuXSiK38MlqKbh86jog.$93jRTQZ6C.yxaf6eG4jqg2jmUBySQiqoU2awfj3hjiB:19494:0:99999:7:::
+
+--------------------------------------------------------------------------------------------------------
+###Get Groups (Assigned users can see infront of the groups)
+dilshan@dilshan-ubuntu:~$ cat /etc/group
+
+root:x:0:
+
+daemon:x:1:
+
+bin:x:2:
+
+sys:x:3:
+
+adm:x:4:syslog,dilshan
+
+tty:x:5:
+
+disk:x:6:
+
+lp:x:7:
+
+mail:x:8:
+
+news:x:9:
+
+uucp:x:10:
+
+man:x:12:
+
+proxy:x:13:
+
+kmem:x:15:
+
+dialout:x:20:
+
+fax:x:21:
+
+voice:x:22:
+
+cdrom:x:24:dilshan
+
+floppy:x:25:
+
+tape:x:26:
+
+sudo:x:27:dilshan
+
+audio:x:29:pulse
+
+dip:x:30:dilshan
+
+www-data:x:33:
+
+backup:x:34:
+
+operator:x:37:
+
+list:x:38:
+
+irc:x:39:
+
+src:x:40:
+
+gnats:x:41:
+
+shadow:x:42:
+
+utmp:x:43:
+
+video:x:44:
+
+sasl:x:45:
+
+plugdev:x:46:dilshan
+
+staff:x:50:
+
+games:x:60:
+
+users:x:100:
+
+nogroup:x:65534:
+
+systemd-journal:x:101:
+
+systemd-network:x:102:
+
+systemd-resolve:x:103:
+
+crontab:x:104:
+
+messagebus:x:105:
+
+systemd-timesync:x:106:
+
+input:x:107:
+
+sgx:x:108:
+
+kvm:x:109:
+
+render:x:110:
+
+syslog:x:111:
+
+tss:x:112:
+
+bluetooth:x:113:
+
+ssl-cert:x:114:
+
+uuidd:x:115:
+
+systemd-oom:x:116:
+
+tcpdump:x:117:
+
+_ssh:x:118:
+
+avahi-autoipd:x:119:
+
+netdev:x:120:
+
+avahi:x:121:
+
+lpadmin:x:122:dilshan
+
+rtkit:x:123:
+
+whoopsie:x:124:
+
+sssd:x:125:
+
+fwupd-refresh:x:126:
+
+nm-openvpn:x:127:
+
+scanner:x:128:saned
+
+saned:x:129:
+
+colord:x:130:
+
+geoclue:x:131:
+
+pulse:x:132:
+
+pulse-access:x:133:
+
+gdm:x:134:
+
+lxd:x:135:dilshan
+
+dilshan:x:1000:
+
+sambashare:x:136:dilshan
+
+vboxsf:x:999:
+
+vboxdrmipc:x:998:
+
+admin:x:1001:
+
+devops:x:1002:
+
+--------------------------------------------------------------------------------------------------------
+###Adding a user
+
+dilshan@dilshan-ubuntu:~$ sudo adduser john
+
+Adding user `john' ...
+
+Adding new group `john' (1004) ...
+
+Adding new user `john' (1003) with group `john' ...
+
+Creating home directory `/home/john' ...
+
+Copying files from `/etc/skel' ...
+
+New password: 
+
+BAD PASSWORD: The password is shorter than 8 characters
+
+Retype new password: 
+
+passwd: password updated successfully
+
+Changing the user information for john
+
+Enter the new value, or press ENTER for the default
+
+	Full Name []: John Mark
+
+	Room Number []: 123
+
+	Work Phone []: 1234567890
+
+	Home Phone []: 0987654321
+
+	Other []: Oslo
+
+Is the information correct? [Y/n] Y
+
+dilshan@dilshan-ubuntu:~$ cat /etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+
+sync:x:4:65534:sync:/bin:/bin/sync
+
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+
+tss:x:106:112:TPM software stack,,,:/var/lib/tpm:/bin/false
+
+uuidd:x:107:115::/run/uuidd:/usr/sbin/nologin
+
+systemd-oom:x:108:116:systemd Userspace OOM Killer,,,:/run/systemd:/usr/sbin/nologin
+
+tcpdump:x:109:117::/nonexistent:/usr/sbin/nologin
+
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+
+kernoops:x:113:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+
+avahi:x:114:121:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+
+cups-pk-helper:x:115:122:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+
+rtkit:x:116:123:RealtimeKit,,,:/proc:/usr/sbin/nologin
+
+whoopsie:x:117:124::/nonexistent:/bin/false
+
+sssd:x:118:125:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+
+speech-dispatcher:x:119:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+
+fwupd-refresh:x:120:126:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+
+nm-openvpn:x:121:127:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+
+saned:x:122:129::/var/lib/saned:/usr/sbin/nologin
+
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+
+dilshan:x:1000:1000:dilshan,,,:/home/dilshan:/bin/bash
+
+vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+
+admin:x:1001:1001:admin,,,:/home/admin:/bin/bash
+
+tom:x:1002:1003:,,,:/home/tom:/bin/bash
+
+john:x:1003:1004:John Mark,123,1234567890,0987654321,Oslo:/home/john:/bin/bash
+
+###Change the password
+
+dilshan@dilshan-ubuntu:~$ passwd john
+
+passwd: You may not view or modify password information for john.
+
+dilshan@dilshan-ubuntu:~$ sudo passwd john
+
+New password: 
+
+BAD PASSWORD: The password is shorter than 8 characters
+
+Retype new password: 
+
+passwd: password updated successfully
+
+dilshan@dilshan-ubuntu:~$ su - john
+
+Password: 
+
+john@dilshan-ubuntu:~$ pwd
+
+/home/john
+
+john@dilshan-ubuntu:~$ su - dilshan
+
+Password: 
+
+--------------------------------------------------------------------------------------------------------
+###Create a group
+dilshan@dilshan-ubuntu:~$ sudo addgroup devops
+
+Adding group `devops' (GID 1002) ...
+
+Done.
+
+###user john added to devops group
+
+dilshan@dilshan-ubuntu:~$ sudo usermod -g devops john
+
+[sudo] password for dilshan: 
+
+###user john added to admin group (Automatically removed from already assigned groups)
+
+dilshan@dilshan-ubuntu:~$ sudo usermod -G admin john
+
+###user john added to devops group (Already assigned groups will exists & append a new group)  
+dilshan@dilshan-ubuntu:~$ sudo usermod -aG devops john
+
+###delete a group called john
+dilshan@dilshan-ubuntu:~$ sudo delgroup john
+
+Removing group `john' ...
+
+Done.
+
+###Check groups which user belongs
+dilshan@dilshan-ubuntu:~$ groups
+
+dilshan adm cdrom sudo dip plugdev lpadmin lxd sambashare
+
+dilshan@dilshan-ubuntu:~$ groups john
+
+john : devops admin
+
+dilshan@dilshan-ubuntu:~$ su - john
+
+Password: 
+
+To run a command as administrator (user "root"), use "sudo <command>".
+
+See "man sudo_root" for details.
+
+
+
+john@dilshan-ubuntu:~$ groups
+
+devops admin
+
+john@dilshan-ubuntu:~$ exit
+
+logout
+
+dilshan@dilshan-ubuntu:~$ 
+
+###add user nathan to devops group when creating the user (User will belongs to nathan & devops groups)
+dilshan@dilshan-ubuntu:~$ sudo useradd -G devops nathan
+
+dilshan@dilshan-ubuntu:~$ groups nathan
+
+nathan : nathan devops
+
+###remove a user from a group
+dilshan@dilshan-ubuntu:~$ sudo gpasswd -d nathan devops
+
+Removing user nathan from group devops
+
+dilshan@dilshan-ubuntu:~$ groups nathan
+
+nathan : nathan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

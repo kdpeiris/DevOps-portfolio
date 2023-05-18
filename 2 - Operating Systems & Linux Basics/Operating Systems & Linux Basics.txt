@@ -1,3 +1,8 @@
 Linux File System
 
 bin, sbin, lib, usr, usr/local, opt, boot : All are read only folders
+
+User & Group Commands:
+
+adduser, addgroup, deluser, delgroup - use for manual execution (user friendly)
+useradd, groupadd, userdel, groupdel - use for automated way (low-level utilities)
