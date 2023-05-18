@@ -1,0 +1,220 @@
+###Pipe & less - Navigate through pages
+
+dilshan@dilshan-ubuntu:~$ cat /var/log/syslog | less
+dilshan@dilshan-ubuntu:~$ ls /bin | less
+dilshan@dilshan-ubuntu:~$ history | less
+
+###Pipe & grep - Searching
+
+dilshan@dilshan-ubuntu:~$ history | grep sudo
+
+   74  sudo adduser admin
+
+   77  sudo addgroup devops
+
+   92  sudo chown john:devops deployment.yaml
+
+   94  sudo chown dilshan deployment.yaml
+
+   96  sudo chgrp dilshan deployment.yaml
+
+  100  sudo chmod +x deployment.yaml
+
+  102  sudo chmod a-x deployment.yaml
+
+  104  sudo chmod g+x deployment.yaml
+
+  106  sudo chmod u-w deployment.yaml
+
+  108  sudo chmod u=rw- deployment.yaml
+
+  110  sudo chmod 664 deployment.yaml
+
+  126  history | grep sudo
+
+dilshan@dilshan-ubuntu:~$ history | grep "sudo chmod"
+
+  100  sudo chmod +x deployment.yaml
+
+  102  sudo chmod a-x deployment.yaml
+
+  104  sudo chmod g+x deployment.yaml
+
+  106  sudo chmod u-w deployment.yaml
+
+  108  sudo chmod u=rw- deployment.yaml
+
+  110  sudo chmod 664 deployment.yaml
+
+  127  history | grep "sudo chmod"
+
+dilshan@dilshan-ubuntu:~$ history | grep sudo | less
+
+dilshan@dilshan-ubuntu:~$ ls /usr/bin | grep python
+
+python3
+
+python3.10
+
+python3-futurize
+
+python3-pasteurize
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cat deployment.yaml
+
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: nginx-deployment
+
+  labels:
+
+    app: nginx
+
+spec:
+
+  replicas: 3
+
+  selector:
+
+    matchLabels:
+
+      app: nginx
+
+    spec:
+
+      containers:
+
+      - name: nginx
+
+        image: nginx:1.14.2
+
+        ports:
+
+        - containerPort: 8080
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cat deployment.yaml | grep 8080
+
+        - containerPort: 8080
+
+###Redirects
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ history | grep sudo > sudo_commands.txt
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls
+
+deployment.yaml  Readme.md  sudo_commands.txt
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cat sudo_commands.txt
+
+   74  sudo adduser admin
+
+   77  sudo addgroup devops
+
+   92  sudo chown john:devops deployment.yaml
+
+   94  sudo chown dilshan deployment.yaml
+
+   96  sudo chgrp dilshan deployment.yaml
+
+  100  sudo chmod +x deployment.yaml
+
+  102  sudo chmod a-x deployment.yaml
+
+  104  sudo chmod g+x deployment.yaml
+
+  106  sudo chmod u-w deployment.yaml
+
+  108  sudo chmod u=rw- deployment.yaml
+
+  110  sudo chmod 664 deployment.yaml
+
+  126  history | grep sudo
+
+  127  history | grep "sudo chmod"
+
+  128  history | grep sudo | less
+
+  142  history | grep sudo > sudo_commands.txt
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cat sudo_commands.txt > sudo_rm_commands.txt
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ ls
+
+deployment.yaml  Readme.md  sudo_commands.txt  sudo_rm_commands.txt
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cat sudo_rm_commands.txt
+
+   74  sudo adduser admin
+
+   77  sudo addgroup devops
+
+   92  sudo chown john:devops deployment.yaml
+
+   94  sudo chown dilshan deployment.yaml
+
+   96  sudo chgrp dilshan deployment.yaml
+
+  100  sudo chmod +x deployment.yaml
+
+  102  sudo chmod a-x deployment.yaml
+
+  104  sudo chmod g+x deployment.yaml
+
+  106  sudo chmod u-w deployment.yaml
+
+  108  sudo chmod u=rw- deployment.yaml
+
+  110  sudo chmod 664 deployment.yaml
+
+  126  history | grep sudo
+
+  127  history | grep "sudo chmod"
+
+  128  history | grep sudo | less
+
+  142  history | grep sudo > sudo_commands.txt
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ history | grep rm >> sudo_rm_commands.txt
+
+dilshan@dilshan-ubuntu:~/Documents/java_project$ cat sudo_rm_commands.txt
+
+   74  sudo adduser admin
+
+   77  sudo addgroup devops
+
+   92  sudo chown john:devops deployment.yaml
+
+   94  sudo chown dilshan deployment.yaml
+
+   96  sudo chgrp dilshan deployment.yaml
+
+  100  sudo chmod +x deployment.yaml
+
+  102  sudo chmod a-x deployment.yaml
+
+  104  sudo chmod g+x deployment.yaml
+
+  106  sudo chmod u-w deployment.yaml
+
+  108  sudo chmod u=rw- deployment.yaml
+
+  110  sudo chmod 664 deployment.yaml
+
+  126  history | grep sudo
+
+  127  history | grep "sudo chmod"
+
+  128  history | grep sudo | less
+
+  142  history | grep sudo > sudo_commands.txt
+
+  145  cat sudo_commands.txt > sudo_rm_commands.txt
+
+  147  cat sudo_rm_commands.txt
+
+  148  history | grep rm >> sudo_rm_commands.txt
+
