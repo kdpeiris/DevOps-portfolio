@@ -10,7 +10,7 @@ fileName=config.yaml
 
 dirName=$1
 
-if [ -d "$dirName" ] && [ "$(ls $dirName)" == "$fileName" ]; 
+if [ -d "$dirName" ] && [ "$(ls $dirName)" = "$fileName" ]; 
 
 then
 
@@ -180,7 +180,7 @@ while true
 
 		read -p "Please enter a number:" num
 
-		if [ "$num" == "q" ]
+		if [ "$num" = "q" ]
 
 		then
 

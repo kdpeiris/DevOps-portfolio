@@ -16,7 +16,7 @@ function sum {
 
 		read -p "Enter a number: " num
 
-		if [ "$num" == "q" ]
+		if [ "$num" = "q" ]
 
 		then
 
@@ -114,7 +114,7 @@ function add_ex_file() {
 
 
 
-	if [ "$file_ex" == "true" ]
+	if [ "$file_ex" = "true" ]
 
 	then
 
