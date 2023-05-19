@@ -1,0 +1,174 @@
+###Function without parameters
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat function1.sh
+
+#!/bin/bash
+
+
+
+function sum {
+
+	sum=0
+
+	while true
+
+	do
+
+		read -p "Enter a number: " num
+
+		if [ "$num" == "q" ]
+
+		then
+
+			break
+
+		fi
+
+		
+
+		sum=$(($sum+$num))
+
+		echo "Total is $sum"
+
+	done
+
+}
+
+
+
+sum
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./function1.sh
+
+Enter a number: 12
+
+Total is 12
+
+Enter a number: 13
+
+Total is 25
+
+Enter a number: 25
+
+Total is 50
+
+Enter a number: q
+
+------------------------------------------------------------------------------------------------------------
+###Function with 1 parameter
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat function2.sh
+
+#!/bin/bash
+
+
+
+function add_file() {
+
+	file_name=$1
+
+	touch $file_name
+
+	echo "Created the file $file_name"
+
+}
+
+
+
+add_file test1.txt
+
+add_file test2.sh
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./function2.sh
+
+Created the file test1.txt
+
+Created the file test2.sh
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ls -l | grep test
+
+-rw-rw-r-- 1 dilshan dilshan    0 mai   19 19:48 test1.txt
+
+-rw-rw-r-- 1 dilshan dilshan    0 mai   19 19:48 test2.sh
+
+------------------------------------------------------------------------------------------------------------
+###Function with 2 parameters
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat function3.sh
+
+#!/bin/bash
+
+
+
+function add_ex_file() {
+
+	file_name=$1
+
+	file_ex=$2
+
+
+
+	touch $file_name
+
+        echo "Created the file $file_name"
+
+
+
+	if [ "$file_ex" == "true" ]
+
+	then
+
+		chmod u+x $file_name
+
+		echo "Added the execution permission to $file_name"
+
+	fi
+
+}
+
+
+
+add_ex_file test1.txt
+
+add_ex_file test2.sh true
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./function3.sh
+
+Created the file test1.txt
+
+Created the file test2.sh
+
+Added the execution permission to test2.sh
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ls -l | grep test
+
+-rw-rw-r-- 1 dilshan dilshan    0 mai   19 20:01 test1.txt
+
+-rwxrw-r-- 1 dilshan dilshan    0 mai   19 20:01 test2.sh
+
+------------------------------------------------------------------------------------------------------------
+###Return Function with 2 parameters
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat return.sh
+
+#!/bin/bash
+
+
+
+function num_total() {
+
+	total=$(($1+$2))
+
+	return $total
+
+}
+
+
+
+num_total 5 25
+
+echo "Total of numbers: $?"
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./return.sh
+
+Total of numbers: 30
