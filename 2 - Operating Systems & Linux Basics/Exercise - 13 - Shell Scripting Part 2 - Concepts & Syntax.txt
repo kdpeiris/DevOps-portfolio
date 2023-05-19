@@ -1,0 +1,220 @@
+###Bash scripting Syntax
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat list_script.sh
+
+#!/bin/bash
+
+
+
+fileName=config.yaml
+
+dirName=$1
+
+if [ -d "$dirName" ] && [ "$(ls $dirName)" == "$fileName" ]; 
+
+then
+
+	echo "Renamed the file $fileName -> new_config.yaml"
+
+	mv $dirName/$fileName $dirName/new_config.yaml
+
+else
+
+	echo "Create a config folder"
+
+	mkdir $dirName
+
+	touch $dirName/$fileName
+
+	echo "$(ls -R)"
+
+fi
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./list_script.sh config
+
+Create a config folder
+
+.:
+
+config
+
+firstscript.sh
+
+list_script.sh
+
+
+
+./config:
+
+config.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./list_script.sh config
+
+Renamed the file config.yaml -> new_config.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ls -R
+
+.:
+
+config  firstscript.sh  list_script.sh
+
+
+
+./config:
+
+new_config.yaml
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ 
+
+
+-------------------------------------------------------------------------------------------------------------------
+###How to get user inputs to bash script
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat input.sh
+
+#!/bin/bash
+
+
+
+echo "How to get user inputs to bash script"
+
+
+
+read -p "Please enter the username" uname
+
+
+
+echo "Your username is : $uname"
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./input.sh
+
+How to get user inputs to bash script
+
+Please enter the usernamekdpeiris
+
+Your username is : kdpeiris
+----------------------------------------------------------------------------------------------------------------------
+###Get all parameters & count
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat parameters.sh
+
+#!/bin/bash
+
+
+
+echo "Parameters: $*"
+
+echo "Parameter Count: $#"
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./parameters.sh owner groupowner filename filetype
+
+Parameters: owner groupowner filename filetype
+
+Parameter Count: 4
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ 
+
+----------------------------------------------------------------------------------------------------------------------
+###For Loop
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat for.sh
+
+#!/bin/bash
+
+
+
+echo "Parameters: $*"
+
+echo "Parameter Count: $#"
+
+
+
+for param in $*
+
+	do
+
+		if [ -d "$param" ]
+
+		then
+
+			echo "This is a folder named $param"
+
+		fi
+
+		echo "$param"
+
+	done
+
+
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./for.sh dilshan peiris config test
+
+Parameters: dilshan peiris config test
+
+Parameter Count: 4
+
+dilshan
+
+peiris
+
+This is a folder named config
+
+config
+
+test
+
+----------------------------------------------------------------------------------------------------------------------
+###While Loop
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ cat while.sh
+
+#!/bin/bash
+
+
+
+sum=0
+
+while true
+
+	do
+
+		read -p "Please enter a number:" num
+
+		if [ "$num" == "q" ]
+
+		then
+
+			break
+
+		fi
+
+
+
+		sum=$(($sum+$num))
+
+		echo "Total of the entered numbers: $sum"
+
+	done
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./while.sh
+
+Please enter a number:5
+
+Total of the entered numbers: 5
+
+Please enter a number:10
+
+Total of the entered numbers: 15
+
+Please enter a number:25
+
+Total of the entered numbers: 40
+
+Please enter a number:100
+
+Total of the entered numbers: 140
+
+Please enter a number:q
+
+
+
