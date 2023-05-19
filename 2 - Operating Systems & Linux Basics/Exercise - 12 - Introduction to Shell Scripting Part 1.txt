@@ -1,0 +1,39 @@
+###Bash Scripting
+
+###File Name - firstscript.sh
+
+#!/bin/bash
+
+echo "My Fisrst Bash Script"
+
+-------------------------------------------------------------------------------------------------------------------------------
+.
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ touch firstscript.sh
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ vim firstscript.sh
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./firstscript.sh
+
+bash: ./firstscript.sh: Permission denied
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ls -l firstscript.sh
+
+-rw-rw-r-- 1 dilshan dilshan 42 mai   19 11:25 firstscript.sh
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ sudo chmod u+x firstscript.sh
+
+[sudo] password for dilshan: 
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ls -l firstscript.sh
+
+-rwxrw-r-- 1 dilshan dilshan 42 mai   19 11:25 firstscript.sh
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ ./firstscript.sh
+
+My Fisrst Bash Script
+
+dilshan@dilshan-ubuntu:~/Documents/bash_scripting$ bash firstscript.sh
+
+My Fisrst Bash Script
+
+
