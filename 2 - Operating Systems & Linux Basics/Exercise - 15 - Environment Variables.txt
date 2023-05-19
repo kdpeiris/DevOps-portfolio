@@ -1,0 +1,128 @@
+###Environment Variables
+
+### Get Environment Variables
+
+dilshan@dilshan-ubuntu:~$ printenv | less
+
+dilshan@dilshan-ubuntu:~$ printenv USER
+
+dilshan
+
+dilshan@dilshan-ubuntu:~$ printenv | grep USER
+
+USERNAME=dilshan
+
+USER=dilshan
+
+dilshan@dilshan-ubuntu:~$ echo $USER
+
+dilshan
+
+### Set Environment Variables (ONLY PERSIST FOR THE CURRENT TERMINAL, NOT PERMANENT)
+
+dilshan@dilshan-ubuntu:~$ export DB_USERNAME=dbuser
+
+dilshan@dilshan-ubuntu:~$ export DB_PASSWORD=dbpassword
+
+dilshan@dilshan-ubuntu:~$ export DB_NAME=mydb
+
+dilshan@dilshan-ubuntu:~$ printenv | grep DB
+
+DB_PASSWORD=dbpassword
+
+DB_USERNAME=dbuser
+
+DB_NAME=mydb
+
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+dilshan@dilshan-ubuntu:~$ echo $DB_NAME
+
+mydb
+
+dilshan@dilshan-ubuntu:~$ export DB_NAME=newmydb
+
+dilshan@dilshan-ubuntu:~$ echo $DB_NAME
+
+newmydb
+
+###Delete Environment Variables
+
+dilshan@dilshan-ubuntu:~$ unset DB_USERNAME
+
+dilshan@dilshan-ubuntu:~$ printenv | grep DB
+
+DB_PASSWORD=dbpassword
+
+DB_NAME=newmydb
+
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+---------------------------------------------------------------------------------------------------------------
+###Set Environment Variables Permanently (.bashrc) - USER Specific
+
+dilshan@dilshan-ubuntu:~$ printenv | grep DB
+
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+dilshan@dilshan-ubuntu:~$ vim .bashrc
+
+dilshan@dilshan-ubuntu:~$ printenv | grep DB
+
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+dilshan@dilshan-ubuntu:~$ source .bashrc
+
+dilshan@dilshan-ubuntu:~$ printenv | grep DB
+
+DB_PASSWORD=dbpassword
+
+DB_USERNAME=dbuser
+
+DB_NAME=mydb
+
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+---------------------------------------------------------------------------------------------------------------
+###Set Environment Variables Permanently (/etc/environment) - GLOBAL
+
+dilshan@dilshan-ubuntu:/$ vim /etc/environment
+
+dilshan@dilshan-ubuntu:/$ echo $PATH
+
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+
+---------------------------------------------------------------------------------------------------------------
+###SET PATH environment variable (THEN CAN RUN SCRIPTS IN ANY DIRECTORY WITHOUT STAYING IN THE SAME DIRECTORY WHICH SCRIPT IS SAVED)
+
+dilshan@dilshan-ubuntu:~$ vim welcome.sh
+
+dilshan@dilshan-ubuntu:~$ cat welcome.sh
+
+#!/bin/bash
+
+
+
+echo "Welcome to DevOps Bootcamp $USER"
+
+dilshan@dilshan-ubuntu:~$ vim .bashrc
+
+dilshan@dilshan-ubuntu:~$ cat .bashrc
+
+PATH=$PATH:/home/dilshan
+
+dilshan@dilshan-ubuntu:~$ chmod a+x welcome.sh
+
+dilshan@dilshan-ubuntu:~$ ls -l welcome.sh
+
+-rwxrwxr-x 1 dilshan dilshan 53 mai   19 22:13 welcome.sh
+
+dilshan@dilshan-ubuntu:~$ source .bashrc
+
+dilshan@dilshan-ubuntu:~$ cd Documents/
+
+dilshan@dilshan-ubuntu:~/Documents$ welcome.sh
+
+Welcome to DevOps Bootcamp dilshan
+
