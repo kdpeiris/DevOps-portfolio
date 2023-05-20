@@ -1,0 +1,309 @@
+###Run Bash script on Remote server using SSH keys
+
+dilshan@dilshan-ubuntu:~/.ssh$ ssh root@64.227.7.223
+
+The authenticity of host '64.227.7.223 (64.227.7.223)' can't be established.
+
+ED25519 key fingerprint is SHA256:2Y3QtbRoJo2Enc0Ckvm98peaEX45jjiu3jOGfNtgWPA.
+
+This key is not known by any other names
+
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+
+Warning: Permanently added '64.227.7.223' (ED25519) to the list of known hosts.
+
+root@64.227.7.223's password: 
+
+Welcome to Ubuntu 22.10 (GNU/Linux 5.19.0-23-generic x86_64)
+
+
+
+ * Documentation:  https://help.ubuntu.com
+
+ * Management:     https://landscape.canonical.com
+
+ * Support:        https://ubuntu.com/advantage
+
+
+
+  System information as of Sat May 20 08:27:12 UTC 2023
+
+
+
+  System load:  0.080078125       Users logged in:       0
+
+  Usage of /:   17.1% of 9.52GB   IPv4 address for eth0: 64.227.7.223
+
+  Memory usage: 36%               IPv4 address for eth0: 10.10.0.5
+
+  Swap usage:   0%                IPv4 address for eth1: 10.116.0.2
+
+  Processes:    90
+
+
+
+0 updates can be applied immediately.
+
+
+
+
+
+
+
+The programs included with the Ubuntu system are free software;
+
+the exact distribution terms for each program are described in the
+
+individual files in /usr/share/doc/*/copyright.
+
+
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+
+applicable law.
+
+
+
+root@ubuntu-s-1vcpu-512mb-10gb-nyc1-01:~# exit
+
+logout
+
+Connection to 64.227.7.223 closed.
+
+dilshan@dilshan-ubuntu:~/.ssh$
+
+dilshan@dilshan-ubuntu:~$ ls -l welcome.sh
+
+-rwxrwxr-x 1 dilshan dilshan 53 mai   19 22:13 welcome.sh
+
+dilshan@dilshan-ubuntu:~$ cat welcome.sh
+
+#!/bin/bash
+
+
+
+echo "Welcome to DevOps Bootcamp $USER"
+
+dilshan@dilshan-ubuntu:~$ ls .ssh
+
+known_hosts  known_hosts.old
+
+dilshan@dilshan-ubuntu:~$ ssh-keygen -t rsa
+
+Generating public/private rsa key pair.
+
+Enter file in which to save the key (/home/dilshan/.ssh/id_rsa): 
+
+Enter passphrase (empty for no passphrase): 
+
+Enter same passphrase again: 
+
+Your identification has been saved in /home/dilshan/.ssh/id_rsa
+
+Your public key has been saved in /home/dilshan/.ssh/id_rsa.pub
+
+The key fingerprint is:
+
+SHA256:zvQBkmZRcZ0Iz26HgJ+rViBhb5wa1r/VDGldUJXSJKI dilshan@dilshan-ubuntu
+
+The key's randomart image is:
+
++---[RSA 3072]----+
+
+|      ..+o.+.=+oo|
+
+|    o  + +o +.oo |
+
+|   . =*.oEoo ..  |
+
+|    +oBo =+..    |
+
+|   . = oS.=+.    |
+
+|    .  +o+.oo    |
+
+|       .+o.      |
+
+|      ...        |
+
+|     ..          |
+
++----[SHA256]-----+
+
+dilshan@dilshan-ubuntu:~$ ls .ssh
+
+id_rsa  id_rsa.pub  known_hosts  known_hosts.old
+
+dilshan@dilshan-ubuntu:~$ vim .ssh/id_rsa.pub
+
+dilshan@dilshan-ubuntu:~$ ssh root@64.227.7.223
+
+root@64.227.7.223's password: 
+
+Welcome to Ubuntu 22.10 (GNU/Linux 5.19.0-23-generic x86_64)
+
+
+
+ * Documentation:  https://help.ubuntu.com
+
+ * Management:     https://landscape.canonical.com
+
+ * Support:        https://ubuntu.com/advantage
+
+
+
+  System information as of Sat May 20 08:34:49 UTC 2023
+
+
+
+  System load:  0.0               Users logged in:       0
+
+  Usage of /:   17.1% of 9.52GB   IPv4 address for eth0: 64.227.7.223
+
+  Memory usage: 36%               IPv4 address for eth0: 10.10.0.5
+
+  Swap usage:   0%                IPv4 address for eth1: 10.116.0.2
+
+  Processes:    90
+
+
+
+0 updates can be applied immediately.
+
+
+
+New release '23.04' available.
+
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+
+
+Last login: Sat May 20 08:27:13 2023 from 212.251.251.61
+
+root@ubuntu-s-1vcpu-512mb-10gb-nyc1-01:~# ls .ssh
+
+authorized_keys
+
+root@ubuntu-s-1vcpu-512mb-10gb-nyc1-01:~# vim .ssh/authorized_keys
+
+root@ubuntu-s-1vcpu-512mb-10gb-nyc1-01:~# exit
+
+logout
+
+Connection to 64.227.7.223 closed.
+
+dilshan@dilshan-ubuntu:~$ ssh -i .ssh/id_rsa root@64.227.7.223
+
+Welcome to Ubuntu 22.10 (GNU/Linux 5.19.0-23-generic x86_64)
+
+
+
+ * Documentation:  https://help.ubuntu.com
+
+ * Management:     https://landscape.canonical.com
+
+ * Support:        https://ubuntu.com/advantage
+
+
+
+  System information as of Sat May 20 08:37:42 UTC 2023
+
+
+
+  System load:  0.0               Users logged in:       0
+
+  Usage of /:   17.0% of 9.52GB   IPv4 address for eth0: 64.227.7.223
+
+  Memory usage: 36%               IPv4 address for eth0: 10.10.0.5
+
+  Swap usage:   0%                IPv4 address for eth1: 10.116.0.2
+
+  Processes:    93
+
+
+
+0 updates can be applied immediately.
+
+
+
+New release '23.04' available.
+
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+
+
+Last login: Sat May 20 08:34:49 2023 from 212.251.251.61
+
+root@ubuntu-s-1vcpu-512mb-10gb-nyc1-01:~# exit
+
+logout
+
+Connection to 64.227.7.223 closed.
+
+dilshan@dilshan-ubuntu:~$ scp welcome.sh root@64.227.7.223:/root
+
+welcome.sh                                                                                                                                                               100%   53     0.3KB/s   00:00    
+
+dilshan@dilshan-ubuntu:~$ ssh root@64.227.7.223
+
+Welcome to Ubuntu 22.10 (GNU/Linux 5.19.0-23-generic x86_64)
+
+
+
+ * Documentation:  https://help.ubuntu.com
+
+ * Management:     https://landscape.canonical.com
+
+ * Support:        https://ubuntu.com/advantage
+
+
+
+  System information as of Sat May 20 08:42:05 UTC 2023
+
+
+
+  System load:  0.0               Users logged in:       0
+
+  Usage of /:   17.0% of 9.52GB   IPv4 address for eth0: 64.227.7.223
+
+  Memory usage: 36%               IPv4 address for eth0: 10.10.0.5
+
+  Swap usage:   0%                IPv4 address for eth1: 10.116.0.2
+
+  Processes:    90
+
+
+
+0 updates can be applied immediately.
+
+
+
+New release '23.04' available.
+
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+
+
+Last login: Sat May 20 08:37:43 2023 from 212.251.251.61
+
+root@ubuntu-s-1vcpu-512mb-10gb-nyc1-01:~# ls
+
+snap  welcome.sh
+
+root@ubuntu-s-1vcpu-512mb-10gb-nyc1-01:~# ls -l
+
+total 8
+
+drwx------ 3 root root 4096 May 20 08:20 snap
+
+-rwxr-xr-x 1 root root   53 May 20 08:42 welcome.sh
+
+root@ubuntu-s-1vcpu-512mb-10gb-nyc1-01:~# ./welcome.sh
+
+Welcome to DevOps Bootcamp root

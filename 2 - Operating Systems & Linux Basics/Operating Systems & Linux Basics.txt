@@ -50,3 +50,12 @@ File Permission in Absolute(Numeric) Mode:
 
 sudo chmod 777 filename
 
+Networking Commands:
+
+ifconfig
+netstat (Listning Ports)
+ps aux (Current processes)
+nslookup (DNS Resolve)
+ping
+
+
