@@ -1,0 +1,641 @@
+###ONLY DO IN FEATURE BRANCH
+
+###Done a change in a file, (git reset --hard HEAD~1) removes last commit as well as revert the last change
+
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit -m "Removed textbox"
+[bugfix/auth_config 5b3d0a8] Removed textbox
+ 1 file changed, 1 deletion(-)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git status
+On branch bugfix/auth_config
+Your branch is ahead of 'origin/bugfix/auth_config' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 5b3d0a80e5d4c7b7b69b6fdf3e37472862aed73a (HEAD -> bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 19:36:12 2023 +0200
+
+    Removed textbox
+
+commit 33987e5d2e7024bd5d48a1b768af0bdb7f0511a6 (origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 18:13:04 2023 +0200
+
+    Remove a line of code
+
+commit 80629325979570421f8aa9030c7cf3cabebbfe70
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:56:02 2023 +0200
+
+    Add .gitignore file
+
+commit 8cd5d8d2f2f27a92a038ce72924b8344249108af
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:50:34 2023 +0200
+
+    Add .gitignore file
+
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git reset --hard HEAD~1
+HEAD is now at 33987e5 Remove a line of code
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 33987e5d2e7024bd5d48a1b768af0bdb7f0511a6 (HEAD -> bugfix/auth_config, origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 18:13:04 2023 +0200
+
+    Remove a line of code
+
+commit 80629325979570421f8aa9030c7cf3cabebbfe70
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:56:02 2023 +0200
+
+    Add .gitignore file
+
+commit 8cd5d8d2f2f27a92a038ce72924b8344249108af
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:50:34 2023 +0200
+
+    Add .gitignore file
+
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:58:14 2023 +0200
+
+    create a RAEDME & add a line
+
+commit ec6d1bae2633e808160b092c5556430dbab50534
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+:
+--------------------------------------------------------------------------------------------------------------------------
+
+###Done a change in a file, (git reset HEAD~1) removes only the last commit, code change stays same
+
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit -m "Removed textbox again"
+[bugfix/auth_config 3d131ec] Removed textbox again
+ 1 file changed, 1 deletion(-)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git status
+On branch bugfix/auth_config
+Your branch is ahead of 'origin/bugfix/auth_config' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 3d131ecaa2140c156b88deb9c3798908739ccf6f (HEAD -> bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 19:42:58 2023 +0200
+
+    Removed textbox again
+
+commit 33987e5d2e7024bd5d48a1b768af0bdb7f0511a6 (origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 18:13:04 2023 +0200
+
+    Remove a line of code
+
+commit 80629325979570421f8aa9030c7cf3cabebbfe70
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:56:02 2023 +0200
+
+    Add .gitignore file
+
+commit 8cd5d8d2f2f27a92a038ce72924b8344249108af
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:50:34 2023 +0200
+
+    Add .gitignore file
+
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       index.html
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 33987e5d2e7024bd5d48a1b768af0bdb7f0511a6 (HEAD -> bugfix/auth_config, origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 18:13:04 2023 +0200
+
+    Remove a line of code
+
+commit 80629325979570421f8aa9030c7cf3cabebbfe70
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:56:02 2023 +0200
+
+    Add .gitignore file
+
+commit 8cd5d8d2f2f27a92a038ce72924b8344249108af
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:50:34 2023 +0200
+
+    Add .gitignore file
+
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:58:14 2023 +0200
+
+    create a RAEDME & add a line
+
+commit ec6d1bae2633e808160b092c5556430dbab50534
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git status
+On branch bugfix/auth_config
+Your branch is up to date with 'origin/bugfix/auth_config'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit -m "Removed textbox again DONE"
+[bugfix/auth_config 2c0cee5] Removed textbox again DONE
+ 1 file changed, 1 deletion(-)
+
+
+--------------------------------------------------------------------------------------
+###Amend a commit to last commit message
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 2c0cee50faa2ee8b20ee65662898e11a4caacb16 (HEAD -> bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 19:49:42 2023 +0200
+
+    Removed textbox again DONE
+
+commit 33987e5d2e7024bd5d48a1b768af0bdb7f0511a6 (origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 18:13:04 2023 +0200
+
+    Remove a line of code
+
+commit 80629325979570421f8aa9030c7cf3cabebbfe70
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:56:02 2023 +0200
+
+    Add .gitignore file
+
+commit 8cd5d8d2f2f27a92a038ce72924b8344249108af
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:50:34 2023 +0200
+
+    Add .gitignore file
+
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git status
+On branch bugfix/auth_config
+Your branch is ahead of 'origin/bugfix/auth_config' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit --amend
+[bugfix/auth_config d23b133] Removed textbox again DONE
+ Date: Sun May 21 19:49:42 2023 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git status
+On branch bugfix/auth_config
+Your branch is ahead of 'origin/bugfix/auth_config' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit d23b13344e9d35e41e7e931714aea7af2f39d97e (HEAD -> bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 19:49:42 2023 +0200
+
+    Removed textbox again DONE
+
+commit 33987e5d2e7024bd5d48a1b768af0bdb7f0511a6 (origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 18:13:04 2023 +0200
+
+    Remove a line of code
+
+commit 80629325979570421f8aa9030c7cf3cabebbfe70
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:56:02 2023 +0200
+
+    Add .gitignore file
+
+commit 8cd5d8d2f2f27a92a038ce72924b8344249108af
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:50:34 2023 +0200
+
+    Add .gitignore file
+
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$
+
+
+----------------------------------------------------------------------
+###Remove an already pushed commit from local & remote repos
+
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 335 bytes | 335.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for bugfix/auth_config, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=bugfix%2Fauth_config
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+   33987e5..d23b133  bugfix/auth_config -> bugfix/auth_config
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git reset --hard HEAD~1
+HEAD is now at 33987e5 Remove a line of code
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 33987e5d2e7024bd5d48a1b768af0bdb7f0511a6 (HEAD -> bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 18:13:04 2023 +0200
+
+    Remove a line of code
+
+commit 80629325979570421f8aa9030c7cf3cabebbfe70
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:56:02 2023 +0200
+
+    Add .gitignore file
+
+commit 8cd5d8d2f2f27a92a038ce72924b8344249108af
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:50:34 2023 +0200
+
+    Add .gitignore file
+
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:58:14 2023 +0200
+
+    create a RAEDME & add a line
+
+commit ec6d1bae2633e808160b092c5556430dbab50534
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push --force
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for bugfix/auth_config, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=bugfix%2Fauth_config
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+ + d23b133...33987e5 bugfix/auth_config -> bugfix/auth_config (forced update)
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+###Undoing commits in Master/Dev (git revert commit_id)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git add .
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git commit -m "Test"
+[master a9e88ce] Test
+ 6 files changed, 33 insertions(+), 3 deletions(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/localproject.iml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.24 KiB | 422.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+To gitlab.com:dilshanpeiris51/webproject.git
+   119f6a0..a9e88ce  master -> master
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git log
+commit a9e88ce76e1bca096ea13502d6f960eef39f4816 (HEAD -> master, origin/master)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 20:06:38 2023 +0200
+
+    Test
+
+commit 119f6a035bc9e9ca1c7c2b2b86bcd69253b19bc7
+Merge: 4a7331e 6540f62
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 13:33:18 2023 +0000
+
+    Merge branch 'feature/database_connection' into 'master'
+
+    Add README
+
+    See merge request dilshanpeiris51/webproject!1
+
+commit 6540f6267ba1902b8dd6309f95279fccc91d5d3b (origin/feature/database_connection)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 12:43:00 2023 +0200
+
+    Add README
+
+commit 4a7331e9a8b102396ddbf38151f3ecb17f6f586d
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 12:07:00 2023 +0200
+
+    Add local web project to remote repo
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git revert a9e88ce76e1bca096ea13502d6f960eef39f4816
+[master cb8687c] Revert "Test"
+ 6 files changed, 3 insertions(+), 33 deletions(-)
+ delete mode 100644 .idea/.gitignore
+ delete mode 100644 .idea/localproject.iml
+ delete mode 100644 .idea/misc.xml
+ delete mode 100644 .idea/modules.xml
+ delete mode 100644 .idea/vcs.xml
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 389.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+To gitlab.com:dilshanpeiris51/webproject.git
+   a9e88ce..cb8687c  master -> master
