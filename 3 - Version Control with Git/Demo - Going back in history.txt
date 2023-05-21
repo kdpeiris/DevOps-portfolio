@@ -1,0 +1,97 @@
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 33987e5d2e7024bd5d48a1b768af0bdb7f0511a6 (HEAD -> bugfix/auth_config, origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 18:13:04 2023 +0200
+
+    Remove a line of code
+
+commit 80629325979570421f8aa9030c7cf3cabebbfe70
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:56:02 2023 +0200
+
+    Add .gitignore file
+
+commit 8cd5d8d2f2f27a92a038ce72924b8344249108af
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:50:34 2023 +0200
+
+    Add .gitignore file
+
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:58:14 2023 +0200
+
+    create a RAEDME & add a line
+
+commit ec6d1bae2633e808160b092c5556430dbab50534
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 13:56:13 2023 +0000
+
+    Add  a note on index.html
+
+commit 4a7331e9a8b102396ddbf38151f3ecb17f6f586d
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 12:07:00 2023 +0200
+
+    Add local web project to remote repo
+~
+
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git checkout ec6d1bae2633e808160b092c5556430dbab50534
+Note: switching to 'ec6d1bae2633e808160b092c5556430dbab50534'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ec6d1ba Add  a note on index.html
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject ((ec6d1ba...))
+$ git checkout bugfix/auth_config
+Previous HEAD position was ec6d1ba Add  a note on index.html
+Switched to branch 'bugfix/auth_config'
+Your branch is up to date with 'origin/bugfix/auth_config'.
