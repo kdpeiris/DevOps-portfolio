@@ -1,0 +1,33 @@
+#1 - git pull (in local master branch) ***Remote master may have new commits from other developers
+#2 - checkout to feature branch & merge master (git merge master)
+#3 - git push from feature branch
+#4 - merge request from remote feature to remote master 
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git pull
+Already up to date.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git checkout bugfix/auth_config
+Switched to branch 'bugfix/auth_config'
+Your branch is ahead of 'origin/bugfix/auth_config' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git merge master
+Already up to date.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 311 bytes | 311.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for bugfix/auth_config, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=bugfix%2Fauth_config
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+   33987e5..bc5cd06  bugfix/auth_config -> bugfix/auth_config
