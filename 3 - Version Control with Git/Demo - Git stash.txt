@@ -1,0 +1,77 @@
+### Did a change in index.html first
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git status
+On branch bugfix/auth_config
+Your branch is up to date with 'origin/bugfix/auth_config'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        index.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git stash
+Saved working directory and index state WIP on bugfix/auth_config: 8062932 Add .gitignore file
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git status
+On branch bugfix/auth_config
+Your branch is up to date with 'origin/bugfix/auth_config'.
+
+nothing to commit, working tree clean
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git checkout bugfix/auth_config
+Switched to branch 'bugfix/auth_config'
+Your branch is up to date with 'origin/bugfix/auth_config'.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git stash pop
+On branch bugfix/auth_config
+Your branch is up to date with 'origin/bugfix/auth_config'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (aad04457d1c578b019c4826d5f279abf976068fd)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit -m "Remove a line of code"
+[bugfix/auth_config 33987e5] Remove a line of code
+ 1 file changed, 1 deletion(-)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for bugfix/auth_config, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=bugfix%2Fauth_config
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+   8062932..33987e5  bugfix/auth_config -> bugfix/auth_config

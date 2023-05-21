@@ -1,0 +1,49 @@
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git status
+On branch bugfix/auth_config
+Your branch is up to date with 'origin/bugfix/auth_config'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git rm -r --cached .idea
+rm '.idea/.gitignore'
+rm '.idea/localproject.iml'
+rm '.idea/misc.xml'
+rm '.idea/modules.xml'
+rm '.idea/vcs.xml'
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit -m "Add .gitignore file"
+[bugfix/auth_config 8cd5d8d] Add .gitignore file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+ 
+ Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 233 bytes | 233.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for bugfix/auth_config, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=bugfix%2Fauth_config
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+   8cd5d8d..8062932  bugfix/auth_config -> bugfix/auth_config
+
+
+### .idea folder removed from remote repo
