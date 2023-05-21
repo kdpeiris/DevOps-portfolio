@@ -1,0 +1,103 @@
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git branch
+* master
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git pull
+From gitlab.com:dilshanpeiris51/webproject
+ * [new branch]      bugfix/auth_config -> origin/bugfix/auth_config
+Already up to date.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git checkout bugfix/auth_config
+Switched to a new branch 'bugfix/auth_config'
+branch 'bugfix/auth_config' set up to track 'origin/bugfix/auth_config'.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git checkout -b feature/database_connection
+Switched to a new branch 'feature/database_connection'
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (feature/database_connection)
+$ ls
+index.html
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (feature/database_connection)
+$ vim README.md
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (feature/database_connection)
+$ ls
+README.md  index.html
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (feature/database_connection)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (feature/database_connection)
+$ git commit
+[feature/database_connection 6540f62] Add README
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (feature/database_connection)
+$ git status
+On branch feature/database_connection
+nothing to commit, working tree clean
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (feature/database_connection)
+$ git push
+fatal: The current branch feature/database_connection has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/database_connection
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (feature/database_connection)
+$ git push --set-upstream origin feature/database_connection
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for feature/database_connection, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=feature%2Fdatabase_connection
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+ * [new branch]      feature/database_connection -> feature/database_connection
+branch 'feature/database_connection' set up to track 'origin/feature/database_connection'.
+
+
+###EXTRA POINTS
+
+###GET LOCAL BRANCH LIST
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git branch
+  bugfix/auth_config
+  feature/database_connection
+* master
+
+###GET REMOTE BRANCH LIST
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git branch -r
+  origin/bugfix/auth_config
+  origin/feature/database_connection
+  origin/master
+
+###GET ALL (LOCAL & REMOTE) BRANCH LIST
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git branch -a
+  bugfix/auth_config
+  feature/database_connection
+* master
+  remotes/origin/bugfix/auth_config
+  remotes/origin/feature/database_connection
+  remotes/origin/master
