@@ -1,0 +1,18 @@
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git branch
+  bugfix/auth_config
+  feature/database_connection
+* master
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git pull
+Already up to date.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git branch -d feature/database_connection
+Deleted branch feature/database_connection (was 6540f62).
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git branch
+  bugfix/auth_config
+* master
