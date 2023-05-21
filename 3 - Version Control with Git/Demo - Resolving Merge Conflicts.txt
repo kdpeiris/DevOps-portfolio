@@ -1,0 +1,137 @@
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit -m "Add paragraph in index.html"
+[bugfix/auth_config 7a7430c] Add paragraph in index.html
+ 6 files changed, 33 insertions(+), 1 deletion(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/localproject.iml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+To gitlab.com:dilshanpeiris51/webproject.git
+ ! [rejected]        bugfix/auth_config -> bugfix/auth_config (fetch first)
+error: failed to push some refs to 'gitlab.com:dilshanpeiris51/webproject.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git pull -r
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 1 (delta 1), pack-reused 2
+Unpacking objects: 100% (3/3), 349 bytes | 1024 bytes/s, done.
+From gitlab.com:dilshanpeiris51/webproject
+   583a51b..52cf2fd  bugfix/auth_config -> origin/bugfix/auth_config
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+error: could not apply 7a7430c... Add paragraph in index.html
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 7a7430c... Add paragraph in index.html
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 52cf2fd
+Last command done (1 command done):
+   pick 7a7430c Add paragraph in index.html
+No commands remaining.
+You are currently rebasing branch 'bugfix/auth_config' on '52cf2fd'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .idea/.gitignore
+        new file:   .idea/localproject.iml
+        new file:   .idea/misc.xml
+        new file:   .idea/modules.xml
+        new file:   .idea/vcs.xml
+        modified:   index.html
+
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config|REBASE 1/1)
+$ git rebase --continue
+[detached HEAD c739a9d] Add paragraph in index.html
+ 6 files changed, 33 insertions(+), 1 deletion(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/localproject.iml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+Successfully rebased and updated refs/heads/bugfix/auth_config.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.26 KiB | 1.26 MiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for bugfix/auth_config, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=bugfix%2Fauth_config
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+   52cf2fd..c739a9d  bugfix/auth_config -> bugfix/auth_config
+
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit c739a9dea4a1e072e0e6475b7abc96c95ee47058 (HEAD -> bugfix/auth_config, origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 17:27:16 2023 +0200
+
+    Add paragraph in index.html
+
+commit 52cf2fdff8756b79c536712eae110782c996928a
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:26:17 2023 +0000
+
+    Update index.html
+
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:58:14 2023 +0200
+
+    create a RAEDME & add a line
+
+commit ec6d1bae2633e808160b092c5556430dbab50534
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 13:56:13 2023 +0000
+
+    Add  a note on index.html
+
+commit 4a7331e9a8b102396ddbf38151f3ecb17f6f586d
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 12:07:00 2023 +0200
+
+    Add local web project to remote repo
