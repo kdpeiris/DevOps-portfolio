@@ -1,0 +1,185 @@
+###WITHOUT USING REBASE
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git branch
+  bugfix/auth_config
+* master
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (master)
+$ git checkout bugfix/auth_config
+Switched to branch 'bugfix/auth_config'
+Your branch is up to date with 'origin/bugfix/auth_config'.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ vim README.md
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit
+[bugfix/auth_config 7d5f958] create a RAEDME & add a line
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+To gitlab.com:dilshanpeiris51/webproject.git
+ ! [rejected]        bugfix/auth_config -> bugfix/auth_config (fetch first)
+error: failed to push some refs to 'gitlab.com:dilshanpeiris51/webproject.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 279 bytes | 0 bytes/s, done.
+From gitlab.com:dilshanpeiris51/webproject
+   4a7331e..ec6d1ba  bugfix/auth_config -> origin/bugfix/auth_config
+Merge made by the 'ort' strategy.
+ index.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 634 bytes | 634.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for bugfix/auth_config, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=bugfix%2Fauth_config
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+   ec6d1ba..10f2f5c  bugfix/auth_config -> bugfix/auth_config
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2 (HEAD -> bugfix/auth_config, origin/bugfix/auth_config)
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:58:14 2023 +0200
+
+    create a RAEDME & add a line
+
+commit ec6d1bae2633e808160b092c5556430dbab50534
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 13:56:13 2023 +0000
+
+    Add  a note on index.html
+
+commit 4a7331e9a8b102396ddbf38151f3ecb17f6f586d
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 12:07:00 2023 +0200
+
+    Add local web project to remote repo
+
+
+###WITH USING REBASE
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ ls
+README.md  index.html
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ vim README.md
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git commit -m "Add 2nd line to README"
+[bugfix/auth_config cc2fccb] Add 2nd line to README
+ 1 file changed, 1 insertion(+)
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+To gitlab.com:dilshanpeiris51/webproject.git
+ ! [rejected]        bugfix/auth_config -> bugfix/auth_config (fetch first)
+error: failed to push some refs to 'gitlab.com:dilshanpeiris51/webproject.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git pull -r
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 328 bytes | 0 bytes/s, done.
+From gitlab.com:dilshanpeiris51/webproject
+   10f2f5c..774b658  bugfix/auth_config -> origin/bugfix/auth_config
+Successfully rebased and updated refs/heads/bugfix/auth_config.
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for bugfix/auth_config, visit:
+remote:   https://gitlab.com/dilshanpeiris51/webproject/-/merge_requests/new?merge_request%5Bsource_branch%5D=bugfix%2Fauth_config
+remote:
+To gitlab.com:dilshanpeiris51/webproject.git
+   774b658..583a51b  bugfix/auth_config -> bugfix/auth_config
+
+Win10-L@LAPTOP-J72U8K6I MINGW64 /d/gitNana/localproject (bugfix/auth_config)
+$ git log
+commit 583a51b875b2e2641f0901c202074ab58aa5cea8 (HEAD -> bugfix/auth_config, origin/bugfix/auth_config)
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 16:08:19 2023 +0200
+
+    Add 2nd line to README
+
+commit 774b65869b0abcd98e0b7b0de436ea0981377253
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 14:06:16 2023 +0000
+
+    Removed paragraph section from index.html
+
+commit 10f2f5c2fab76a6b75ae20bde1f83379c87b82b2
+Merge: 7d5f958 ec6d1ba
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:59:31 2023 +0200
+
+    Merge branch 'bugfix/auth_config' of gitlab.com:dilshanpeiris51/webproject into bugfix/auth_config
+
+commit 7d5f958273db4cd11b075102b1e5e0a63ebf0f45
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 15:58:14 2023 +0200
+
+    create a RAEDME & add a line
+
+commit ec6d1bae2633e808160b092c5556430dbab50534
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 13:56:13 2023 +0000
+
+    Add  a note on index.html
+
+commit 4a7331e9a8b102396ddbf38151f3ecb17f6f586d
+Author: Dilshan Peiris <dilshanpeiris51@gmail.com>
+Date:   Sun May 21 12:07:00 2023 +0200
+
+    Add local web project to remote repo
